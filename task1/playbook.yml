@@ -1,0 +1,8 @@
+---
+- hosts: vm
+  become: yes
+  tasks:
+    - name: Upload system info JSON
+      copy:
+        src: system_info.json
+        dest: /tmp/system_info.json
