@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clone Repo') {
       steps {
-        git 'git 'https://github.com/roshandeshmuro/system-info-pipeline.git'
+        git 'https://github.com/Deshmukhroshan/bash-python-ansible-Project.git'
       }
     }
 
