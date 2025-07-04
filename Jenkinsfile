@@ -10,14 +10,14 @@ pipeline {
 
     stage('Collect Info') {
       steps {
-        sh 'bash systeminfo.sh'
-        sh 'python3 format_json.py'
+        sh 'bash task1/systeminfo.sh'
+        sh 'python3 task1/format_json.py'
       }
     }
 
     stage('Send to VM') {
       steps {
-        sh 'ansible-playbook -i inventory.ini playbook.yml'
+        sh 'ansible-playbook -i task1/inventory.ini task1/playbook.yml'
       }
     }
   }
